@@ -12,6 +12,7 @@
 # below:
 .git
 .gitignore
-
+scripts
+.DS_Store
 node_modules
 #!include:.gitignore

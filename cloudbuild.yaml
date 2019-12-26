@@ -1,6 +1,6 @@
 steps:
 - name: 'gcr.io/cloud-builders/npm'
-  args: ['install']
+  args: ['install', '--only=prod']
 - name: 'gcr.io/cloud-builders/gcloud'
   args: ['functions', 'deploy', 'toad-alerts', '--trigger-http', '--runtime', 'nodejs10', '--region', 'us-central1', '--entry-point', 'app', '--set-env-vars', 'PIXABAY_API_KEY=${_PIXABAY_API_KEY}']
   
