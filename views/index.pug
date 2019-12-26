@@ -7,7 +7,10 @@ html
     style
         include ./style.css
     body
+
+        h1 Toad Alerts ©
+        h3 your home for toad!
+        - let n = 5
         each image in images
-            - var randNum_V = Math.round(Math.random() * 1000);
-            - var randNum_H = Math.round(Math.random() * 1000);
-            img(src=image class="frog" style=`animation: moveX 5s linear 0s infinite alternate, moveY 5s linear 0s infinite alternate; position: relative; top: ${randNum_V}px; left: ${randNum_H}px;`)
+            img(src=image class="frog" style=`animation: moveX ${n}s linear 0s infinite alternate, moveY ${n + 1.3}s linear 0s infinite alternate;`)
+            - n += 0.5
